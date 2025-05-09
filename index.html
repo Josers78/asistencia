@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Asistencia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Confirmar Asistencia</h1>
+    
+    <input type="text" id="apellidoInput" placeholder="Ingresa apellido de familia">
+ 
+    <div class="botones-centrados">
+        <button id="buscarBtn">Buscar Familia</button>
+        <button id="confirmarBtn">Confirmar Asistencia</button>
+    </div>
+    
+    
+    <div id="familia"></div>
+
+
+    <!-- 👇🏻 Este div va aquí, no dentro del script -->
+    <div id="mensajeConfirmacion" class="tarjeta oculto">
+      ¡Gracias por confirmar la asistencia, los esperamos en el gran día! 🤵🏻👰🏻🎉
+    </div>
+
+    <div id="mensajeAdvertencia" class="tarjeta oculto advertencia">
+      ⚠️ Por favor, selecciona al menos un integrante.
+    </div>
+    
+    <!-- Tu script de JavaScript -->
+    <script type="module">
+        import { buscarFamilia, guardarConfirmacion } from './js/script.js';
+        
+        // Asignar eventos a los botones
+        document.getElementById('buscarBtn').addEventListener('click', buscarFamilia);
+        document.getElementById('confirmarBtn').addEventListener('click', guardarConfirmacion);
+    </script>
+</body>
+</html>
+

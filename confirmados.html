@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Confirmados</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Invitados Confirmados</h1>
+    <div id="confirmados"></div>
+
+    <!-- 🔥 Todo en un solo módulo -->
+    <script type="module">
+        import './js/firebase-config.js';
+        import { cargarConfirmados } from './js/script.js';
+
+        window.addEventListener('DOMContentLoaded', () => {
+            cargarConfirmados();
+        });
+    </script>
+</body>
+</html>
