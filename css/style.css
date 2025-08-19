@@ -58,7 +58,8 @@ button:hover {
 
 
 
-#familia div {
+/* DESPUÉS (solo filas de integrantes) */
+#familia .integrante {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -72,10 +73,9 @@ button:hover {
   transition: transform 0.3s;
 }
 
-#familia div:hover {
+#familia .integrante:hover {
   transform: scale(1.02);
 }
-
 
 
 
@@ -212,4 +212,40 @@ button:hover {
   margin: 0 auto 1em;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   font-weight: 500;
+}
+
+
+/* Contenedor adaptable para los botones de apellidos */
+.contenedor-familias {
+  display: flex;
+  flex-wrap: wrap;            /* Se acomodan en varias filas */
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  padding: 12px 16px;
+  max-width: 100%;
+  width: fit-content;         /* Se ajusta al contenido */
+  margin: 12px auto;          /* Centrado */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Evita que los textos de los botones se partan raro */
+.contenedor-familias button {
+  white-space: nowrap;
+}
+
+.btn-regresar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.btn-regresar:hover {
+    background-color: #bbb;
 }
